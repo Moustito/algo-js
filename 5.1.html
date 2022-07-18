@@ -1,0 +1,25 @@
+<script>
+    let favoriteSeries = {
+        series: "",
+        years: "",
+        actor: []
+    };
+
+    alert(askTvSerie());
+
+    /**Demande le nom l'année et les acteur d'une serie et les envoie dans les variable ci-dessus */
+    function askTvSerie() {
+        let a = prompt("Give me the name of your favorite series : ");
+        favoriteSeries.series = a;
+        let b = prompt("Give me the years : ");
+        favoriteSeries.years = b;
+
+        let f = prompt("Give me a numbor of actor : ");
+        for (let i = 0; i < f; i++) {
+            let c = prompt("Give me a actor : ");
+            favoriteSeries.actor.push(c);
+        }
+    }
+        alert("The series is " + favoriteSeries.series + " sortie en " + favoriteSeries.years + " avec " + favoriteSeries.actor + ".");
+
+</script>

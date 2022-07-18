@@ -1,0 +1,25 @@
+<script>
+
+    /** Donne une chiffre aléatoire entre 1 et 10*/
+    function rand10() {
+
+        let a = Math.random() * 10 + 1;
+        return parseInt(a)
+    }
+
+    let arr = []
+    let n = prompt("Give me a number:");
+
+    /** Affiche "n" nombre random*/
+    function multiRand(n) {
+        for (let i = 0; i < n; i++) {
+            let b = rand10()
+            arr.push(b);
+            
+        }
+        return arr
+    }
+
+    alert("The number is " + multiRand(n));
+
+</script>

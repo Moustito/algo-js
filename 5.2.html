@@ -1,0 +1,47 @@
+<script>
+    let favoriteSeries = {
+        series: "",
+        years: "",
+        actor: []
+    };
+
+    alert(askTvSerie());
+
+    /**Demande le nom l'année et les acteur d'une serie et les envoie dans les variable ci-dessus */
+    function askTvSerie() {
+        let a = prompt("Give me the name of your favorite series : ");
+        favoriteSeries.series = a;
+        let b = prompt("Give me the years : ");
+        favoriteSeries.years = b;
+
+        let f = prompt("Give me a numbor of actor : ");
+        for (let i = 0; i < f; i++) {
+            let c = prompt("Give me a actor : ");
+            favoriteSeries.actor.push(c);
+        }
+    }
+
+
+
+    function randomizeCast(tvSerie) {
+  let currentIndex = tvSerie.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [tvSerie[currentIndex], tvSerie[randomIndex]] = [
+    tvSerie[randomIndex], tvSerie[currentIndex]];
+  }
+
+  return tvSerie;
+}
+randomizeCast(favoriteSeries.actor)
+console.log (favoriteSeries.actor);
+
+    alert("The series is " + favoriteSeries.series + " sortie en " + favoriteSeries.years + " avec " + favoriteSeries.actor + ".");
+</script>
